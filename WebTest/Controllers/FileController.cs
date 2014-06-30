@@ -20,8 +20,6 @@ namespace WebTest.Controllers
 
         public ActionResult Download()
         {
-            //this.Response.OutputStream
-            //FileContentResult f=new FileContentResult(
             List<TestClass> list = new List<TestClass>();
             list.Add(new TestClass { Prop1 = "p1", Prop2 = "p2", Field1 = "f1", Field2 = "f2" });
             DataTable dt = ExcelUtility.ConvertObjectsToDataTable(list);
